@@ -13,14 +13,14 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" type='text/css' />
 <link rel='stylesheet' href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" type='text/css'>
 
-<link rel="stylesheet" href="{{ site.url }}/assets/css/icons.css" media="all">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/i.css" type='text/css'>
+<link rel="stylesheet" href="/assets/css/icons.css" media="all">
+<link rel="stylesheet" href="/assets/css/i.css" type='text/css'>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="{{ site.url }}/assets/js/modernizr.min.js"></script>
+<script src="/assets/js/modernizr.min.js"></script>
 
 
-<link rel="alternate" href="{{ site.url }}/feed.xml" title="{{ site.title }} Feed" type="application/atom+xml" />
+<link rel="alternate" href="/feed.xml" title="{{ site.title }} Feed" type="application/atom+xml" />
 
 
 <body id="bump">
@@ -42,7 +42,7 @@
           </li>
           
           {% for link in site.links %}
-              <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}"{% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+              <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ link.url }}{% endif %}"{% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
           {% endfor %}
 
         </ul>
@@ -61,7 +61,7 @@
   <div class="overlay"></div>
   {% endif %}
 
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.feature.image }})"></div>
+  <div class="featured-image" style="background-image: url(/images/{{ page.feature.image }})"></div>
 
   {% endif %}
 

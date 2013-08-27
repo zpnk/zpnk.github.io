@@ -2,7 +2,7 @@ title:            zpnk.me
 tagline:          words and stuff.
 description:      zpnk's blog.
 
-#url: http://zpnk.me
+url:              http://zpnk.me
 
 owner:
   name:           Zach

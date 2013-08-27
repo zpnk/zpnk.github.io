@@ -2,7 +2,7 @@
 
   <div class="push"></div>
 
-  <footer>
+  <footer style="{% if page.is_page %}position: absolute; bottom: 0; height: 40px; // Temp footer fix. {% endif %}">
 
   {% unless page.no_footer %} 
 
@@ -12,7 +12,7 @@
         <p class="list-title">Recent Posts</p>
         {% for post in site.posts | limit:3 %} <!-- for1 -->
           <li>
-            <span class="recent-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines | truncate: 30 }} </a></span>
+            <span class="recent-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines | truncate: 30 }} </a></span>
             <span class="date">{{post.date | date: "%b %d, %Y" }}</span>
           </li>
         {% endfor %}
@@ -28,20 +28,20 @@
           <li><a id="drib" href="http://github.com/{{ site.owner.github }}" target="_blank"><span class="foot-link">Github</span></a></li>
           {% endif %}
 
-          <li><a id="mail" href="mailto:{{ site.owner.email }}"><span class="foot-link">Get in touch</span></a></li>
+          <li><a id="mail" href="mailto:z [at] zpnk.me?subject=Hi Zach!"><span class="foot-link">Get in touch</span></a></li>
         </ul>
     </div>
     </aside>
 
     {% endunless %} 
 
-    <small>&copy; {{ site.time | date: '%Y' }} <a href="http://twitter.com/{{ site.owner.twitter }}" target="_blank">@{{ site.owner.twitter }}</a>.</small>
+    <small>whats a copyright? feel free to hack the sh*% out of this site :)</small>
 
   </footer>
 
-<script src="{{ site.url }}/assets/js/retina.min.js"></script>
+<script src="/assets/js/retina.min.js"></script>
 
-<script src="{{ site.url }}/assets/js/scripts.min.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
   
 
 </body>

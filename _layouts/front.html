@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+<title>ZPNK</title>
+
+<link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Feed" />
+
+<script src="http://use.edgefonts.net/abel;league-gothic.js"></script>
+
+<link rel="stylesheet" href="/assets/front/real/z.min.css" type='text/css'>
+
+</head>
+
+<body>
+
+<header class="intro animate" data-stellar-background-ratio="0.1" id="intro">
+
+	<div class="parallax">
+		<h3>Hi, I'm</h3>
+		<h1>Zach Kollegger</h1>
+		<h3>&amp; that is a picture of a beach.</h3>
+		<h5>Cool right?</h5>
+	</div>
+
+</header>
+
+<div class="navWrap">
+
+	<nav>
+		<div class="title">
+			<h3><a href="#intro">@zpnk</a></h3>
+		</div>
+		
+		<div class="links">
+			<ul>
+				<li><a href="#who" class="aWho">who?!</a></li>
+				<li><a href="#what" class="aWhat">what!?</a></li>
+				<li><a href="#holla" class="aHolla">holla!</a></li>
+				<li><a href="/blog">words</a></li>
+			</ul>
+		</div>
+	</nav>
+</div><!--.navWrap-->
+
+
+<div class="aboutWrap" id="who">
+
+	<section class="who">
+
+		<div class="shinfo">
+
+			<img src="/assets/front/img/me@2x.png"  alt="me" />
+
+			<h5>zachary paul <br /> nicholas kollegger</h5>
+
+			<div class="qaWrap">
+				<p  class="questions">age:
+					<br/>
+					location:
+					<br />
+					music:
+					<br />
+					tv:
+					<br />
+					current:
+				</p>	
+				
+				<p class="answers">
+					20
+					<br/>
+					las vegas, nv
+					<br />
+					house/trance
+					<br />
+					game of thrones
+					<br />
+					<a href="mailto:z [at] zpnk.me?subject=Come work with us, Zach!">looking</a>
+				</p>
+			</div><!--.qaWrap-->
+
+		</div>
+
+		<div class="amI">
+
+			{{ content }}
+
+		</div>
+
+	</section>
+
+</div> <!--.aboutWrap-->
+
+
+<div class="workWrap" id="what">
+
+	<section class="work animate" >
+		<div class="title">
+			<h2>So what do I do?</h2>
+		</div>
+
+		<div class="thing moveLeft">
+			<img src="/assets/front/img/design.svg" alt="design" />
+			<h4><strong>i build</strong> usable ui.</h4>
+			<p>i believe in creating clean, simple interfaces that focus on an intuitive experience. </p>
+		</div>
+
+		<div class="thing moveCenter">
+			<img src="/assets/front/img/code.svg" alt="code"/>
+			<h4><strong>i craft</strong> beautiful code.</h4>
+			<p>clean design isn't just for the ui, it's also for the code that powers it.</p>
+		</div>
+
+		<div class="thing moveRight">
+		<img src="/assets/front/img/rspnsv.svg" alt="responsive"/>
+			<h4><strong>i learn.</strong></h4>
+			<p>from responsive design to Node.js, I love exploring -and using- the latest tech.</p>
+		</div>
+	</section>
+
+	<section class="links">
+
+		<a href="http://github.com/zpnk">browse my latest code on github</a>
+		<p>-or-</p>
+		<a href="http://dribbble.com/zpnk">view my latest designs on dribbble</a>
+		
+	</section>
+
+</div><!--.workWrap-->
+
+
+<div class="contactWrap" id="holla">
+
+	<section class="contact">
+		<div class="hi">
+			<h3>Want to say hi?</h3>
+
+			<a href="mailto:z [at] zpnk.me" class="btn">
+			<span aria-hidden="true" class="icon-paperplane"></span> Shoot me an email</a>
+
+			<p class="or">-or-</p>
+			<a href="callto://zachkollegger" class="btn">
+			<span aria-hidden="true" class="icon-skype"></span> Give me a call</a>
+		</div>
+
+		<div class="social">
+			<h3>Stalk me</h3>
+
+			<ul>
+			<li><a  href="http://twitter.com/zpnk"><span aria-hidden="true" class="icon-twitter"></span></a></li>
+			<li><a href="http://github.com/zpnk"><span aria-hidden="true" class="icon-github"></span></a></li>
+
+			<li><a href="http://dribbble.com/zpnk"><span aria-hidden="true" class="icon-dribbble"></span></a></li>
+			<li><a href="http://last.fm/user/zach_k"><span aria-hidden="true" class="icon-lastfm"></span></a></li>
+			</ul>
+
+		</div>
+
+		<div class="writings">
+			<h3>Writings..</h3>
+			<ul>
+			{% for post in site.posts | limit:3 %}
+			<li><a href="{{ post.url }}">{{ post.title | strip_html | strip_newlines | truncate: 30 }} <span class="meta">{{post.date | date: "%b %d" }}</span></a></li>
+			{% endfor %}
+			</ul>
+		</div>
+
+	</section>
+
+</div><!--.contactWrap-->
+
+<div class="bg" data-stellar-background-ratio="0.1">
+	<p>whats a copyright? feel free to hack the sh*% out of this site :)</p>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/assets/front/real/z.min.js"></script>
+
+</body>
+
+</html>
