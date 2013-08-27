@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
+
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" type='text/css' />
+<link rel='stylesheet' href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" type='text/css'>
+
+<link rel="stylesheet" href="{{ site.url }}/assets/css/icons.css" media="all">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/i.css" type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="{{ site.url }}/assets/js/modernizr.min.js"></script>
+
+
+<link rel="alternate" href="{{ site.url }}/feed.xml" title="{{ site.title }} Feed" type="application/atom+xml" />
+
+
+<body id="bump">
+
+  <header class="site-header {% unless page.light %}darken{% endunless%}">
+
+    <div class="wrap">
+      
+      <hgroup>
+        <h1><a href="/">{{ site.title }}</a></h1>
+      </hgroup>
+      
+      <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+      
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a href="/" title="{{ site.title }}">Home</a>
+          </li>
+          
+          {% for link in site.links %}
+              <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}"{% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+          {% endfor %}
+
+        </ul>
+      </nav>
+
+    </div><!--.wrap-->
+
+  </header><!--/header-->
+
+
+  <section class="article {% unless page.feature or page.is_page %}pad-top{% endunless %}">
+
+  {% if page.feature %}
+  
+  {% if page.feature.overlay %}
+  <div class="overlay"></div>
+  {% endif %}
+
+  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.feature.image }})"></div>
+
+  {% endif %}
+

@@ -1,0 +1,49 @@
+  </section><!--.article-->
+
+  <div class="push"></div>
+
+  <footer>
+
+  {% unless page.no_footer %} 
+
+    <aside class="wrap">
+
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+        {% for post in site.posts | limit:3 %} <!-- for1 -->
+          <li>
+            <span class="recent-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines | truncate: 30 }} </a></span>
+            <span class="date">{{post.date | date: "%b %d, %Y" }}</span>
+          </li>
+        {% endfor %}
+      </ol>
+      
+      <div class="social">
+        <ul>      
+          {% if site.owner.twitter %} 
+          <li><a id="twit" href="http://twitter.com/{{ site.owner.twitter }}" target="_blank"><span class="foot-link">@{{ site.owner.twitter }}</span></a></li> 
+          {% endif %}
+
+          {% if site.owner.github %} 
+          <li><a id="drib" href="http://github.com/{{ site.owner.github }}" target="_blank"><span class="foot-link">Github</span></a></li>
+          {% endif %}
+
+          <li><a id="mail" href="mailto:{{ site.owner.email }}"><span class="foot-link">Get in touch</span></a></li>
+        </ul>
+    </div>
+    </aside>
+
+    {% endunless %} 
+
+    <small>&copy; {{ site.time | date: '%Y' }} <a href="http://twitter.com/{{ site.owner.twitter }}" target="_blank">@{{ site.owner.twitter }}</a>.</small>
+
+  </footer>
+
+<script src="{{ site.url }}/assets/js/retina.min.js"></script>
+
+<script src="{{ site.url }}/assets/js/scripts.min.js"></script>
+  
+
+</body>
+
+</html>
