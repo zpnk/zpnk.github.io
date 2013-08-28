@@ -8,6 +8,6 @@ Hey I'm Zach. I rock guitar & code. I'm a wannabe surfer. I've driven back and f
 
 Anyway, I like making things - specifically, nice things for the internet where I find that clean design, combined with beautiful code, can create magical experiences.
 
-Currently, I am looking for a junior front-end (and/or) developer position in the Vegas area. If you think I'd be a good fit [I'd love to hear from you](mailto:z [at] zpnk.me?subject=Come work with us, Zach!). 
+Currently, I am looking for a junior front-end/developer position in the Vegas area. If you think I'd be a good fit [I'd love to hear from you](mailto:z [at] zpnk.me?subject=Come work with us, Zach!). 
 
 [Check out my resume here!](https://dl.dropboxusercontent.com/u/15878/ZachKollegger-CV.pdf)
