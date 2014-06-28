@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+  <header>
+    <h1><a href="/">{{ site.title }}</a></h1>
+    <h2><a href="/blog">/</a>{{ page.title }}</h2>
+  </header>
+
+  <article>
+
+    {{ content }}
+  </article>
+
+</body>
+
+</html>

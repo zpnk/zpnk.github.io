@@ -1,0 +1,8 @@
+title:      ZPNK
+tagline:    Est. 1993
+
+baseurl:    /
+url:        http://zpnk.me
+
+markdown:   kramdown
+permalink:  /blog/:title/
